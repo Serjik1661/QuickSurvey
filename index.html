@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Опросник</h1>
+    <div class="container">
+        <form id="form">
+            <div class="question">
+                <label>1. Как вас Зовут?</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="question">
+                <label>2. Сколько вам лет?</label>
+                <select id="age" required>
+                    <option value="" disabled selected>Выберите вариант</option>
+                    <option value="under18">Меньше 18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="over35">Больше 35</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>3. Как часто вы агрессирует?</label>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="frequency" value="daily" required>
+                        Ежедневно
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="weekly">
+                        Ежедневно
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="monthly">
+                        Ежемесячно
+                    </label>
+                    <label>
+                        <input type="radio" name="frequency" value="rarely">
+                        Редко
+                    </label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>4. Что вам нравится в нашем продукте? (Отметьте подходящие варианты)</label>
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="likes" value="quality"> Качество
+                        </label>
+                        <label>
+                        <input type="checkbox" name="likes" value="price"> Цена
+                        </label>
+                        <label>
+                        <input type="checkbox" name="likes" value="design"> Дизайн
+                        </label>
+                        <label>
+                        <input type="checkbox" name="likes" value="functionality"> Функциональность
+                        </label>
+                    </div>
+                </div>
+
+            <div class="question">
+                <label>5. Ваши предложения по улучшению:</label>
+                <textarea id="suggestions" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+        <div id="results" class="results-container">
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
